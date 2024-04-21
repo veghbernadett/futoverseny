@@ -1,5 +1,6 @@
 package hu.veghbernadett.futoverseny.models;
 
+import jakarta.persistence.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -15,7 +16,7 @@ import java.util.List;
 public class Futo {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int azonosito;
     private String nev;
     private int eletkor;

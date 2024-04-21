@@ -12,7 +12,7 @@ import java.util.List;
 public class Verseny {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int azonosito;
     private String nev;
     private double tavolsag;
