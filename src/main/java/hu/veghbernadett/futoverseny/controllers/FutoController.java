@@ -27,7 +27,7 @@ public class FutoController {
 
     // futó felvétele
     @PostMapping(path = "/addRunner")
-    public Futo addRunner(@RequestBody Futo futo){
+    public Futo addRunner(@RequestBody Futo futo) {
         futoRepository.save(futo);
         return futo;
     }
@@ -60,4 +60,6 @@ public class FutoController {
 
         return futoRepository.findById(id).get();
     } */
+
+
 }
