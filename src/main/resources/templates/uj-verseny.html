@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Új verseny létrehozása</title>
+</head>
+<body>
+<h1>Új verseny létrehozása</h1>
+<form action="#" th:action="@{/api/versenyek}" method="post" th:object="${verseny}">
+    <label>Név:</label>
+    <input type="text" th:field="*{nev}"/><br/>
+    <label>Távolság:</label>
+    <input type="text" th:field="*{tavolsag}"/><br/>
+    <button type="submit">Mentés</button>
+</form>
+</body>
+</html>

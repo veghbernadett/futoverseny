@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Versenyek</title>
+</head>
+<body>
+<h1>Versenyek listája</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Azonosító</th>
+        <th>Név</th>
+        <th>Távolság</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="verseny : ${versenyek}">
+        <td th:text="${verseny.azonosito}"></td>
+        <td th:text="${verseny.nev}"></td>
+        <td th:text="${verseny.tavolsag}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
