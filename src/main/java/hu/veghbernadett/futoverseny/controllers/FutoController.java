@@ -20,6 +20,7 @@ public class FutoController {
     // összes futó
     @GetMapping("/getRunners")
     public List<Futo> getRunners() {
+
         return futoRepository.findAll();
     }
 
@@ -31,7 +32,7 @@ public class FutoController {
         return futo;
     }
 
-
+/*
     // TODO
     @GetMapping(path = "/futo")
     public Futo getFutto(){
@@ -46,11 +47,17 @@ public class FutoController {
     }
 
 
-
     //  TODO
     @GetMapping(path = "/futo/{id}")
     public Integer getFutoById(@PathVariable int id){
 
         return id;
     }
+
+// TODO
+    @GetMapping("/items/{id}")
+    Futo getById(@PathVariable int id) {
+
+        return futoRepository.findById(id).get();
+    } */
 }
