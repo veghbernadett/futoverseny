@@ -15,8 +15,8 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="eredmeny : ${verseny.eredmenyek}">
-        <td th:text="${eredmeny.futoNev}"></td>
+    <tr th:each="eredmeny : ${verseny.eredmeny}">
+        <td th:text="${eredmeny.futo.nev}"></td>
         <td th:text="${eredmeny.idoeredmeny}"></td>
     </tr>
     </tbody>

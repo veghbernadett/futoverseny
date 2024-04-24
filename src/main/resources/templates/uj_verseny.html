@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Új verseny létrehozása</h1>
-<form action="#" th:action="@{/api/versenyek}" method="post" th:object="${verseny}">
+<form action="#" th:action="@{/versenyek}" method="post" th:object="${verseny}">
     <label>Név:</label>
     <input type="text" th:field="*{nev}"/><br/>
     <label>Távolság:</label>
