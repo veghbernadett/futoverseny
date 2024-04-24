@@ -18,11 +18,6 @@ public class FrontendController {
     @Autowired
     private VersenyRepository versenyRepository;
 
-    @GetMapping("/")
-    public String index() {
-        return "index";
-    }
-
     @GetMapping("/versenyek")
     public String listRaces(Model model) {
         List<Verseny> versenyek = versenyRepository.findAll();
