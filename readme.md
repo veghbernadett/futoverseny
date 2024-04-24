@@ -1,4 +1,4 @@
-Futóverseny Kezelő Alkalmazás
+## Futóverseny Kezelő Alkalmazás
 
 Cél: Fejlessz egy webalkalmazást, amely képes kezelni egy futóverseny résztvevőinek adatait, eredményeit, és megjeleníteni azok statisztikáit. 
 
