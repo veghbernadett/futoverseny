@@ -32,34 +32,6 @@ public class FutoController {
         return futo;
     }
 
-/*
-    // TODO
-    @GetMapping(path = "/futo")
-    public Futo getFutto(){
-
-        Futo futo = new Futo();
-        futo.setNev("Test Futo");
-        futo.setEletkor(22);
-        futo.setNem(true);
-
-        return futo;
-
-    }
-
-
-    //  TODO
-    @GetMapping(path = "/futo/{id}")
-    public Integer getFutoById(@PathVariable int id){
-
-        return id;
-    }
-
-// TODO
-    @GetMapping("/items/{id}")
-    Futo getById(@PathVariable int id) {
-
-        return futoRepository.findById(id).get();
-    } */
 
 
 }

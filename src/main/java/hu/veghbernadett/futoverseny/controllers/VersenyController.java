@@ -27,8 +27,8 @@ public class VersenyController {
                 .collect(Collectors.toList());
     }
 
-
-    @PostMapping("/updateRace")
+    //@PostMapping("/updateRace")
+    @PutMapping("/updateRace")
     public String updateRace(@RequestBody Verseny verseny) {
         try {
             Verseny existingVerseny = versenyRepository.findByAzonosito(verseny.getAzonosito())
