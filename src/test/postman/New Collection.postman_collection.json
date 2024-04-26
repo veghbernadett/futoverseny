@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "8e8f0ca9-53f5-4088-9801-933926d0b62d",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34295745"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/getRunners",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getRunners",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getRunners"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/addRunner",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"nev\": \"Test Futono\",\n    \"eletkor\": 22,\n    \"nem\": true\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/addRunner",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addRunner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/getRaceRunners/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getRaceRunners/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getRaceRunners",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/getRaceRunners/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getRaceRunners/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getRaceRunners",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/getAverageTime/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/getAverageTime/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAverageTime",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/getAverageTime/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/getAverageTime/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getAverageTime",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/addResult",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"futo\": {\n        \"azonosito\": 1\n    },\n    \"verseny\": {\n        \"azonosito\": 1\n    },\n    \"idoeredmeny\": 120\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/addResult",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addResult"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/updateRace",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"azonosito\": 1,\n    \"nev\": \"Uj Verseny\",\n    \"tavolsag\": 25.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/updateRace",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateRace"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
