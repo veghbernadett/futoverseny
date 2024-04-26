@@ -1,8 +1,8 @@
 package hu.veghbernadett.futoverseny.services;
 
-import hu.veghbernadett.futoverseny.models.Eredmeny;
-import hu.veghbernadett.futoverseny.models.Futo;
-import hu.veghbernadett.futoverseny.models.Verseny;
+import hu.veghbernadett.futoverseny.domain.models.Eredmeny;
+import hu.veghbernadett.futoverseny.domain.models.Futo;
+import hu.veghbernadett.futoverseny.domain.models.Verseny;
 import hu.veghbernadett.futoverseny.repositories.EredmenyRepository;
 import hu.veghbernadett.futoverseny.repositories.FutoRepository;
 import hu.veghbernadett.futoverseny.repositories.VersenyRepository;

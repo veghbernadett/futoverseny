@@ -1,6 +1,6 @@
 package hu.veghbernadett.futoverseny.repositories;
 
-import hu.veghbernadett.futoverseny.models.Verseny;
+import hu.veghbernadett.futoverseny.domain.models.Verseny;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -14,6 +14,7 @@ public interface VersenyRepository extends JpaRepository<Verseny, Integer> {
     @Query("SELECT r.nev, er.idoeredmeny FROM Futo r " +
             "JOIN r.eredmeny er " +
             "JOIN er.verseny v " +
-            "WHERE v.azonosito = ?1" )
+            "WHERE v.azonosito = ?1 " +
+            "ORDER BY er.idoeredmeny asc")
     List<Object[]> findRaceResultsById(int versenyAzonosito);
 }

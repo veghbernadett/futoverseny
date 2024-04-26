@@ -1,4 +1,4 @@
-package hu.veghbernadett.futoverseny.models;
+package hu.veghbernadett.futoverseny.domain.models;
 
 import jakarta.persistence.*;
 import lombok.Getter;

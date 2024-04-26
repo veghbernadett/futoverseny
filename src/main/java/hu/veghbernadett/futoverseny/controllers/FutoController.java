@@ -1,13 +1,12 @@
 package hu.veghbernadett.futoverseny.controllers;
 
-import hu.veghbernadett.futoverseny.models.Eredmeny;
-import hu.veghbernadett.futoverseny.models.Futo;
-import hu.veghbernadett.futoverseny.repositories.EredmenyRepository;
+import hu.veghbernadett.futoverseny.domain.models.Futo;
+import hu.veghbernadett.futoverseny.domain.response.FutoDto;
 import hu.veghbernadett.futoverseny.repositories.FutoRepository;
+import hu.veghbernadett.futoverseny.services.transformers.FutoDtoTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -16,12 +15,15 @@ public class FutoController {
     @Autowired
     private FutoRepository futoRepository;
 
+    @Autowired
+    private FutoDtoTransformer futoDtoTransformer;
+
 
     // összes futó
     @GetMapping("/getRunners")
-    public List<Futo> getRunners() {
+    public List<FutoDto> getRunners() {
 
-        return futoRepository.findAll();
+        return futoDtoTransformer.transform(futoRepository.findAll());
     }
 
 

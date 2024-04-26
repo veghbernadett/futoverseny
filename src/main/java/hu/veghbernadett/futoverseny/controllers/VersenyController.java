@@ -1,6 +1,6 @@
 package hu.veghbernadett.futoverseny.controllers;
 
-import hu.veghbernadett.futoverseny.models.Verseny;
+import hu.veghbernadett.futoverseny.domain.models.Verseny;
 import hu.veghbernadett.futoverseny.repositories.EredmenyRepository;
 import hu.veghbernadett.futoverseny.repositories.VersenyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,9 +22,7 @@ public class VersenyController {
     @GetMapping("/getRaceRunners/{versenyAzonosito}")
     public List<Object[]> getRaceRunners(@PathVariable int versenyAzonosito) {
         List<Object[]> results = versenyRepository.findRaceResultsById(versenyAzonosito);
-        return results.stream()
-                .sorted((r1, r2) -> Integer.compare((int) r1[1], (int) r2[1])) // időeredmény szerinti rendezés
-                .collect(Collectors.toList());
+        return results;
     }
 
     //@PostMapping("/updateRace")

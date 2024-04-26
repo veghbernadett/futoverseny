@@ -1,19 +1,15 @@
 package hu.veghbernadett.futoverseny.controllers;
 
-import hu.veghbernadett.futoverseny.models.Eredmeny;
-import hu.veghbernadett.futoverseny.models.Verseny;
+import hu.veghbernadett.futoverseny.domain.models.Eredmeny;
+import hu.veghbernadett.futoverseny.domain.models.Verseny;
 import hu.veghbernadett.futoverseny.repositories.EredmenyRepository;
 import hu.veghbernadett.futoverseny.repositories.VersenyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @RestController
 public class EredmenyController {
@@ -35,7 +31,7 @@ public class EredmenyController {
             return ResponseEntity.notFound().build();
         }
 
-        Verseny race = optionalRace.get();
+        //Verseny race = optionalRace.get();
 
         List<Eredmeny> results = eredmenyRepository.findByVersenyAzonosito(versenyAzonosito);
         if (results.isEmpty()) {

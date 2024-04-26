@@ -1,6 +1,6 @@
 package hu.veghbernadett.futoverseny.controllers;
-import hu.veghbernadett.futoverseny.models.Eredmeny;
-import hu.veghbernadett.futoverseny.models.Verseny;
+import hu.veghbernadett.futoverseny.domain.models.Eredmeny;
+import hu.veghbernadett.futoverseny.domain.models.Verseny;
 import hu.veghbernadett.futoverseny.repositories.VersenyRepository;
 import org.springframework.ui.Model;
 import org.springframework.beans.factory.annotation.Autowired;
